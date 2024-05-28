@@ -18,7 +18,9 @@ namespace DelegateDemos
             //new MovieCollection_1().FilterMovies(MovieFilterAttribute.Director, "Christopher Nolan");
 
             //Closure Demo
-            ClosureDemo.Test();
+            //ClosureDemo.Test();
+            ClosureDemo2.Test();
+            ClosureDemo2.Test();
 
             ////callback with delegates
             //MovieList movies = new MovieList();

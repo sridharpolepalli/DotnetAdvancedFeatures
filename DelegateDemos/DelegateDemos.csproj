@@ -46,6 +46,7 @@
     <Compile Include="CallbackDemo.cs" />
     <Compile Include="ChainInvocation.cs" />
     <Compile Include="ClosureDemo.cs" />
+    <Compile Include="ClosureDemo2.cs" />
     <Compile Include="EventDemo.cs" />
     <Compile Include="ReturningDelegate.cs" />
     <Compile Include="Movie.cs" />
