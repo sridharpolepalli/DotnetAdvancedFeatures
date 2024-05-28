@@ -12,6 +12,7 @@ namespace DelegateDemos
         {
             //new ChainInvocation().CreateAndExecuteNotifyChain();
             //new MulticastDelegateWithReturnType().DisplayAllReturnValues();
+            new MovieCollection_1().FilterMovies(MovieFilterAttribute.Director, "Christopher Nolan");
             Console.ReadLine();
         }
     }

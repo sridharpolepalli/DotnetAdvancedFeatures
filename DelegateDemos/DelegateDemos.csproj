@@ -44,6 +44,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChainInvocation.cs" />
+    <Compile Include="ReturningDelegate.cs" />
+    <Compile Include="Movie.cs" />
     <Compile Include="MulticastDelegateWithReturnType.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
