@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CallbackDemo.cs" />
     <Compile Include="ChainInvocation.cs" />
     <Compile Include="ReturningDelegate.cs" />
     <Compile Include="Movie.cs" />
