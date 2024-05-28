@@ -45,6 +45,8 @@
   <ItemGroup>
     <Compile Include="CallbackDemo.cs" />
     <Compile Include="ChainInvocation.cs" />
+    <Compile Include="ClosureDemo.cs" />
+    <Compile Include="EventDemo.cs" />
     <Compile Include="ReturningDelegate.cs" />
     <Compile Include="Movie.cs" />
     <Compile Include="MulticastDelegateWithReturnType.cs" />
