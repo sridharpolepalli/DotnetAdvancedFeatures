@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2CC527D0-1C52-481B-9E87-835AE5ABC0EE}</ProjectGuid>
+    <ProjectGuid>{94CBDBB6-F48C-44C9-9094-A0AA034A60E9}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>OtherFeatures</RootNamespace>
-    <AssemblyName>OtherFeatures</AssemblyName>
+    <RootNamespace>IODemos</RootNamespace>
+    <AssemblyName>IODemos</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>IODemos.PathDemo.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -43,21 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="CharStreamDemo\Program.cs" />
+    <Compile Include="DirectoryDemo\Program.cs" />
+    <Compile Include="FileDemo\Program.cs" />
+    <Compile Include="FileStreamDemo\Program.cs" />
+    <Compile Include="PathDemo\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Collections\" />
-    <Folder Include="DesignPatterns\" />
-    <Folder Include="Generics\Collections\" />
-    <Folder Include="Generics\Delegates\BuiltIn\" />
-    <Folder Include="ObjectDemo\" />
-    <Folder Include="Reflection\" />
-    <Folder Include="Serialization\" />
-    <Folder Include="Threading\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

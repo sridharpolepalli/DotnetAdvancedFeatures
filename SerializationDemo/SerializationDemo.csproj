@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2CC527D0-1C52-481B-9E87-835AE5ABC0EE}</ProjectGuid>
+    <ProjectGuid>{DB3C96C9-0636-41BC-A9F9-F98EC26A09FE}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>OtherFeatures</RootNamespace>
-    <AssemblyName>OtherFeatures</AssemblyName>
+    <RootNamespace>SerializationDemo</RootNamespace>
+    <AssemblyName>SerializationDemo</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -48,16 +48,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Collections\" />
-    <Folder Include="DesignPatterns\" />
-    <Folder Include="Generics\Collections\" />
-    <Folder Include="Generics\Delegates\BuiltIn\" />
-    <Folder Include="ObjectDemo\" />
-    <Folder Include="Reflection\" />
-    <Folder Include="Serialization\" />
-    <Folder Include="Threading\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
