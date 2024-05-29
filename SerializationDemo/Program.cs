@@ -64,12 +64,15 @@ namespace SerializationDemo
         {
             //What to serialize
             Person person = new Person { Name = "John", Age = 30 };
-            string filePath = "person.bin";
+           
 
             //how to serialize
             //BinaryFormatter serializer = new BinaryFormatter();
             XmlSerializer serializer = new XmlSerializer(typeof(Person));
+
+
             //Where to serialize
+            string filePath = "person.xml";
             using (FileStream fs = new FileStream(filePath, FileMode.Create))
             {
                 serializer.Serialize(fs, person);
