@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DelegateDemos
+namespace DelegateDemos.DelegateWithReturnTypeDemo
 {
     public delegate int ArithDelegate(int i, int j);
     public class MulticastDelegateWithReturnType

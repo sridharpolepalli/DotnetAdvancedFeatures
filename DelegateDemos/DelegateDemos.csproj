@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>DelegateDemos.ChainDemo.ChainDemoMainclass</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -43,19 +46,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CallbackDemo.cs" />
-    <Compile Include="ChainInvocation.cs" />
-    <Compile Include="ClosureDemo.cs" />
-    <Compile Include="ClosureDemo2.cs" />
-    <Compile Include="EventDemo.cs" />
-    <Compile Include="ReturningDelegate.cs" />
+    <Compile Include="4DelegateCallbacks\CallbackDemo.cs" />
+    <Compile Include="1ChainDemo\ChainDemoMainclass.cs" />
+    <Compile Include="1ChainDemo\ChainInvocation.cs" />
+    <Compile Include="7ClosureDemos\ClosureDemo.cs" />
+    <Compile Include="7ClosureDemos\ClosureDemo2.cs" />
+    <Compile Include="4DelegateCallbacks\MainClass.cs" />
+    <Compile Include="5EventDemo\EventDemo.cs" />
+    <Compile Include="5EventDemo\MainClass.cs" />
+    <Compile Include="6Observer pattern\MainClass.cs" />
+    <Compile Include="6Observer pattern\Stock.cs" />
+    <Compile Include="6Observer pattern\StockObserver.cs" />
+    <Compile Include="2DelegateWithReturnTypeDemo\MainClass.cs" />
+    <Compile Include="3ReturnDelegateType\MainClass.cs" />
+    <Compile Include="3ReturnDelegateType\ReturningDelegate.cs" />
     <Compile Include="Movie.cs" />
-    <Compile Include="MulticastDelegateWithReturnType.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="2DelegateWithReturnTypeDemo\MulticastDelegateWithReturnType.cs" />
+    <Compile Include="7ClosureDemos\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,40 +1,38 @@
-﻿using System;
+﻿using DelegateDemos;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DelegateDemos
+namespace DelegateDemos.EventDemo
 {
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
-
-    namespace DelegateDemos
+    public delegate void ConfirmHandler(object o, ConfirmEventArgs args);
+    public class ConfirmEventArgs
     {
-        public class MovieList_Events_1 : Hashtable
-        {
-            public event ConfirmHandler MovieAdded;
-            public event ConfirmHandler MovieDeleted;
+        public string Message { get; set; }
+    }
+    public class MovieList_Events_1 : Hashtable
+    {
+        public event ConfirmHandler MovieAdded;
+        public event ConfirmHandler MovieDeleted;
 
-            public MovieList_Events_1()
+        public MovieList_Events_1()
+        {
+        }
+        public void AddMovie(Movie movie)
+        {
+            base.Add(movie.Title, movie);
+            if (MovieAdded != null)
             {
-            }
-            public void AddMovie(Movie movie)
-            {
-                base.Add(movie.Title, movie);
-                if (MovieAdded != null)
-                {
-                    MovieAdded(this, new ConfirmEventArgs { Message = $"Movie with title {movie.Title} is added successfully" });
-                }
+                MovieAdded(this, new ConfirmEventArgs { Message = $"Movie with title {movie.Title} is added successfully" });
             }
         }
     }
 
+
+    //With Add and Remove methods
     public class MovieList_Events_2 : Hashtable
     {
         private ConfirmHandler _movieAdded;

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DelegateDemos
+namespace DelegateDemos.ClosureDemos
 {
     public delegate int CounterDelegate();
     internal class ClosureDemo2
