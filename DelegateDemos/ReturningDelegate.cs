@@ -53,7 +53,7 @@ namespace DelegateDemos
         }
     }
 
-    //----------------------using Delegate param --------------------------
+    //----------------------using Delegate as returntype --------------------------
 
 
 
