@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A64F083D-1701-4E86-8463-165DBDE97558}</ProjectGuid>
+    <ProjectGuid>{4A1B5775-A805-42CF-A621-EC55D0718A7E}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>DelegateDemos</RootNamespace>
-    <AssemblyName>DelegateDemos</AssemblyName>
+    <RootNamespace>GenericsDemos</RootNamespace>
+    <AssemblyName>GenericsDemos</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,9 +32,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject>DelegateDemos.ReturnDelegateType.MainClass</StartupObject>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,28 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="4DelegateCallbacks\CallbackDemo.cs" />
-    <Compile Include="1ChainDemo\ChainDemoMainclass.cs" />
-    <Compile Include="1ChainDemo\ChainInvocation.cs" />
-    <Compile Include="7ClosureDemos\ClosureDemo.cs" />
-    <Compile Include="7ClosureDemos\ClosureDemo2.cs" />
-    <Compile Include="4DelegateCallbacks\MainClass.cs" />
-    <Compile Include="5EventDemo\EventDemo.cs" />
-    <Compile Include="5EventDemo\MainClass.cs" />
-    <Compile Include="6Observer pattern\MainClass.cs" />
-    <Compile Include="6Observer pattern\Stock.cs" />
-    <Compile Include="6Observer pattern\StockObserver.cs" />
-    <Compile Include="2DelegateWithReturnTypeDemo\MainClass.cs" />
-    <Compile Include="3ReturnDelegateType\MainClass.cs" />
-    <Compile Include="3ReturnDelegateType\ReturningDelegate.cs" />
-    <Compile Include="Movie.cs" />
-    <Compile Include="2DelegateWithReturnTypeDemo\MulticastDelegateWithReturnType.cs" />
-    <Compile Include="7ClosureDemos\Program.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Collections\" />
+    <Folder Include="Delegates\BuiltIn\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -11,7 +11,7 @@ namespace DelegateDemos.ReturnDelegateType
         static void Main(string[] args)
         {
             //returning delegates
-            new MovieCollection_1().FilterMovies(MovieFilterAttribute.Director, "Christopher Nolan");
+            new MovieCollection_1().FilterMovies(MovieFilterAttribute.Genre, "Action");
             Console.ReadLine();
         }
     }
