@@ -8,45 +8,6 @@ using System.Threading.Tasks;
 
 namespace OtherFeatures
 {
-    public class Person
-    {
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-    }
-    public class Employee
-    {
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-
-        public override bool Equals(object obj)
-        {
-            if (obj == null || GetType() != obj.GetType())
-            {
-                return false;
-            }
-
-            Employee employee = (Employee)obj;
-            return FirstName == employee.FirstName && LastName == employee.LastName;
-        }
-    }
-
-    class Author
-    {
-        public string Name { get; set; }
-    }
-
-    class Book
-    {
-        public string Title { get; set; }
-        public Author Author { get; set; }
-
-        public Book ShallowCopy()
-        {
-            return (Book)this.MemberwiseClone();
-        }
-    }
-
-
     internal class ObjectDemo
     {
         public static void EqualsDemo1()

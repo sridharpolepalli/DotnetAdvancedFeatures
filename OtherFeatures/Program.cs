@@ -42,8 +42,20 @@ namespace OtherFeatures
             //Console.WriteLine("-----------ReferenceEquals Demo------------");
             //ObjectDemo.ReferenceEqualsDemo();
 
-            Console.WriteLine("-----------MemberwiseClone Demo (Shallow copy)------------");
-            ObjectDemo.MemberwiseCloneDemo();
+            //Console.WriteLine("-----------MemberwiseClone Demo (Shallow copy)------------");
+            //ObjectDemo.MemberwiseCloneDemo();
+
+            //Console.WriteLine("-----------Extension method Demo ------------");
+            //string phrase = "Hello, world! Welcome to C# extension methods.";
+            //Console.WriteLine($"Word Count: {phrase.WordCount()}");
+
+            //var cloudMarketPlaceAPIs = new[]
+            //{
+            //        new { name = "Microsoft", documentation = "https://learn.microsoft.com/en-us/marketplace/" },
+            //        new { name = "AWS", documentation = "https://docs.aws.amazon.com/marketplace/" },
+            //        new { name = "GCP", documentation = "https://cloud.google.com/marketplace/docs/" }
+            //};
+            //Console.WriteLine($"Cloud marketplace List: {cloudMarketPlaceAPIs.ToJson()}");
         }
     }
 }
