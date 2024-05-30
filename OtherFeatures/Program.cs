@@ -16,6 +16,7 @@ namespace OtherFeatures
         //private static readonly ILog log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
         static void Main(string[] args)
         {
+            #region Log4net configuration
             //// Initialize log4net
             //XmlConfigurator.Configure(new System.IO.FileInfo("log4net.config"));
             //log.Info("Application is starting...");
@@ -39,41 +40,56 @@ namespace OtherFeatures
             //{
             //    log.Info("Completed");
             //}
+            #endregion
 
+            #region Nullable demo
             //Console.WriteLine("-----------Nullable demo------------");
             //NullableType.Demo();
+            #endregion
 
-
+            #region yield return demo
             //Console.WriteLine("-----------yield return demo------------");
             //foreach (int number in YieldDemo.GetNumbers())
             //{
             //    Console.WriteLine(number);
             //}
+            #endregion
 
-
+            #region yield break demo
             //Console.WriteLine("-----------yield break demo------------");
             //IEnumerable values = YieldDemo.GetEvenNumbers(10);
             //foreach (int number in values)
             //{
             //    Console.WriteLine(number);
             //}
+            #endregion
 
-
+            #region Equals Demo
             //Console.WriteLine("-----------Equals Demo------------");
             //ObjectDemo.EqualsDemo1();
+            #endregion
 
+            #region Equals Demo2
             //Console.WriteLine("------------Equals Demo2----------");
             //ObjectDemo.EqualsDemo2();
+            #endregion
 
+            #region GetType Demo
             //Console.WriteLine("-----------GetType Demo------------");
             //ObjectDemo.GetTypeDemo();
+            #endregion
 
+            #region ReferenceEquals Demo
             //Console.WriteLine("-----------ReferenceEquals Demo------------");
             //ObjectDemo.ReferenceEqualsDemo();
+            #endregion
 
+            #region MemberwiseClone Demo (Shallow copy)
             //Console.WriteLine("-----------MemberwiseClone Demo (Shallow copy)------------");
             //ObjectDemo.MemberwiseCloneDemo();
+            #endregion
 
+            #region Extension method Demo
             //Console.WriteLine("-----------Extension method Demo ------------");
             //string phrase = "Hello, world! Welcome to C# extension methods.";
             //Console.WriteLine($"Word Count: {phrase.WordCount()}");
@@ -85,6 +101,7 @@ namespace OtherFeatures
             //        new { name = "GCP", documentation = "https://cloud.google.com/marketplace/docs/" }
             //};
             //Console.WriteLine($"Cloud marketplace List: {cloudMarketPlaceAPIs.ToJson()}");
+            #endregion
         }
     }
 }
