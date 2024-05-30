@@ -1,4 +1,5 @@
-﻿using System;
+﻿using log4net;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,8 +9,10 @@ namespace OtherFeatures
 {
     public static class NullableType
     {
+        //private static readonly ILog log = LogManager.GetLogger(typeof(NullableType));
         public static void Demo()
         {
+            //log.Info("in NullableType:Demo method : Start");
             int? nullableInt = null;
 
             // Check if nullableInt has a value
@@ -22,7 +25,8 @@ namespace OtherFeatures
             //null - coalescing operator
             //int defaultInt = nullableInt ?? 5;
 
-            Console.WriteLine(defaultInt);         
+            Console.WriteLine(defaultInt);
+            //log.Info("in NullableType:Demo method : End");
 
         }
     }

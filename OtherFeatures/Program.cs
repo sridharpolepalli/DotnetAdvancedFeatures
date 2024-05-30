@@ -1,7 +1,10 @@
-﻿using System;
+﻿using log4net;
+using log4net.Config;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,8 +12,34 @@ namespace OtherFeatures
 {
     internal class Program
     {
+        ////Log4Net configuration
+        //private static readonly ILog log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
         static void Main(string[] args)
         {
+            //// Initialize log4net
+            //XmlConfigurator.Configure(new System.IO.FileInfo("log4net.config"));
+            //log.Info("Application is starting...");
+            //try
+            //{
+            //    log.Info("Executing the Operation1...");
+            //    Console.WriteLine("Enter a number");
+            //    int i = int.Parse(Console.ReadLine());
+            //    Console.WriteLine(i);
+            //}
+            //catch(Exception ex)
+            //{
+            //    log.Error(ex.StackTrace);
+            //    log.Debug("Debugging...");
+            //    log.Warn("This is a warning...");
+            //    log.Error("This is an error...");
+            //    log.Fatal("This is a fatal error...");
+            //    Console.WriteLine(ex.Message);
+            //}
+            //finally
+            //{
+            //    log.Info("Completed");
+            //}
+
             //Console.WriteLine("-----------Nullable demo------------");
             //NullableType.Demo();
 
