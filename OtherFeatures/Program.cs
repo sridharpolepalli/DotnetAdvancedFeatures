@@ -12,8 +12,11 @@ namespace OtherFeatures
 {
     internal class Program
     {
+        #region Log4net class level configuration
         ////Log4Net configuration
         //private static readonly ILog log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
+        #endregion
+
         static void Main(string[] args)
         {
             #region Log4net configuration
