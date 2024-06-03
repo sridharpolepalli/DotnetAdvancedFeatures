@@ -21,5 +21,12 @@ namespace OtherFeatures
             Employee employee = (Employee)obj;
             return FirstName == employee.FirstName && LastName == employee.LastName;
         }
+        public override int GetHashCode()
+        {
+            int hash = 17;
+            hash = hash * 23 + (FirstName != null ? FirstName.GetHashCode() : 0);
+            hash = hash * 23 + (LastName != null ? LastName.GetHashCode() : 0);
+            return hash;
+        }
     }
 }
