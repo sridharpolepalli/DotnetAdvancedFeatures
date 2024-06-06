@@ -75,6 +75,7 @@
     <Compile Include="1\GenericMethodDemo.cs" />
     <Compile Include="1\GenericsDemo1.cs" />
     <Compile Include="1\GenericStackDemo.cs" />
+    <Compile Include="2\4GenericEventDemo2.cs" />
     <Compile Include="2\ComparableDemo.cs" />
     <Compile Include="2\ContraandCovarianceDemo.cs" />
     <Compile Include="2\1GenericDelegateDemo2.cs" />

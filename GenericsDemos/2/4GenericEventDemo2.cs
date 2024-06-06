@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GenericsDemos._2.Event
+namespace GenericsDemos._2.EventAddRemove
 {
     public delegate void ConfirmHandler<T1, T2>(T1 sender, T2 eventArgs) where T2 : MyEventArgs;
 
@@ -20,7 +20,18 @@ namespace GenericsDemos._2.Event
     internal class EntityCollection<T>
     {
         public string Category { get; }
-        public event ConfirmHandler<EntityCollection<T>, ConfirmEventArgs> BookAdded;
+        private event ConfirmHandler<EntityCollection<T>, ConfirmEventArgs> _BookAdded;
+        public event ConfirmHandler<EntityCollection<T>, ConfirmEventArgs> BookAdded
+        {
+            add { 
+                _BookAdded += value;
+                Console.WriteLine("Event Added");
+            } 
+            remove { 
+                _BookAdded -= value;
+                Console.WriteLine("Event Removed");
+            }
+        }
         private List<T> Items = new List<T>();
         public EntityCollection(string category)
         {
@@ -31,11 +42,11 @@ namespace GenericsDemos._2.Event
             try
             {
                 Items.Add(b);
-                BookAdded.Invoke(this, new ConfirmEventArgs { Message = $"Book Added to {Category} category" });
+                _BookAdded?.Invoke(this, new ConfirmEventArgs { Message = $"Book Added to {Category} category" });
             }
             catch (Exception ex)
             {
-                BookAdded.Invoke(this, new ConfirmEventArgs
+                _BookAdded?.Invoke(this, new ConfirmEventArgs
                 {
                     Success = false,
                     ErrorMessage = ex.Message + ":" + ex.StackTrace,
@@ -51,12 +62,14 @@ namespace GenericsDemos._2.Event
     }
     public class GenericDelegateDemo3
     {
-        //static void Main()
-        //{
-        //    EntityCollection<Book> bookCollection = new EntityCollection<Book>("Technology");
-        //    bookCollection.BookAdded += new ConfirmHandler<EntityCollection<Book>, ConfirmEventArgs>(BookAdded_Notification);
-        //    bookCollection.AddItem(new Book { Title = "Book1", Description = "Book1" });
-        //}
+        static void Main()
+        {
+            EntityCollection<Book> bookCollection = new EntityCollection<Book>("Technology");
+            bookCollection.BookAdded += new ConfirmHandler<EntityCollection<Book>, ConfirmEventArgs>(BookAdded_Notification);
+            bookCollection.AddItem(new Book { Title = "Book1", Description = "Book1" });
+            bookCollection.BookAdded -= new ConfirmHandler<EntityCollection<Book>, ConfirmEventArgs>(BookAdded_Notification);
+            bookCollection.AddItem(new Book { Title = "Book2", Description = "Book2" });
+        }
 
         private static void BookAdded_Notification(EntityCollection<Book> sender, ConfirmEventArgs confirmEventArgs)
         {
