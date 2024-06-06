@@ -77,7 +77,9 @@
     <Compile Include="1\GenericStackDemo.cs" />
     <Compile Include="2\ComparableDemo.cs" />
     <Compile Include="2\ContraandCovarianceDemo.cs" />
-    <Compile Include="2\GenericDelegateDemo2.cs" />
+    <Compile Include="2\1GenericDelegateDemo2.cs" />
+    <Compile Include="2\2GenericDelegateDemo3.cs" />
+    <Compile Include="2\3GenericEventDemo1.cs" />
     <Compile Include="GenericClassDemo1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

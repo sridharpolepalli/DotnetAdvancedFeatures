@@ -32,12 +32,12 @@ namespace GenericsPractice
     }
     public class GenericDelegateDemo2
     {
-        static void Main()
-        {
-            EntityCollection<Book> bookCollection = new EntityCollection<Book>("Technology");
-            bookCollection.BookAdded = new ConfirmHandler<EntityCollection<Book>, ConfirmEventArgs>(BookAdded_Notification);
-            bookCollection.AddItem(new Book { Title = "Book1", Description = "Book1" });
-        }
+        //static void Main()
+        //{
+        //    EntityCollection<Book> bookCollection = new EntityCollection<Book>("Technology");
+        //    bookCollection.BookAdded = new ConfirmHandler<EntityCollection<Book>, ConfirmEventArgs>(BookAdded_Notification);
+        //    bookCollection.AddItem(new Book { Title = "Book1", Description = "Book1" });
+        //}
 
         private static void BookAdded_Notification(EntityCollection<Book> sender, ConfirmEventArgs confirmEventArgs)
         {
