@@ -68,6 +68,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="1\dynamicdemo.cs" />
+    <Compile Include="1\GenericCollectionDemo.cs" />
+    <Compile Include="1\GenericDelegate.cs" />
+    <Compile Include="1\GenericInterfaceDemo.cs" />
+    <Compile Include="1\GenericMethodDemo.cs" />
+    <Compile Include="1\GenericsDemo1.cs" />
+    <Compile Include="1\GenericStackDemo.cs" />
+    <Compile Include="2\ComparableDemo.cs" />
+    <Compile Include="2\ContraandCovarianceDemo.cs" />
+    <Compile Include="2\GenericDelegateDemo2.cs" />
     <Compile Include="GenericClassDemo1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -76,9 +86,6 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Collections\" />
-    <Folder Include="Delegates\BuiltIn\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
