@@ -62,14 +62,14 @@ namespace GenericsDemos._2.EventAddRemove
     }
     public class GenericDelegateDemo3
     {
-        static void Main()
-        {
-            EntityCollection<Book> bookCollection = new EntityCollection<Book>("Technology");
-            bookCollection.BookAdded += new ConfirmHandler<EntityCollection<Book>, ConfirmEventArgs>(BookAdded_Notification);
-            bookCollection.AddItem(new Book { Title = "Book1", Description = "Book1" });
-            bookCollection.BookAdded -= new ConfirmHandler<EntityCollection<Book>, ConfirmEventArgs>(BookAdded_Notification);
-            bookCollection.AddItem(new Book { Title = "Book2", Description = "Book2" });
-        }
+        //static void Main()
+        //{
+        //    EntityCollection<Book> bookCollection = new EntityCollection<Book>("Technology");
+        //    bookCollection.BookAdded += new ConfirmHandler<EntityCollection<Book>, ConfirmEventArgs>(BookAdded_Notification);
+        //    bookCollection.AddItem(new Book { Title = "Book1", Description = "Book1" });
+        //    bookCollection.BookAdded -= new ConfirmHandler<EntityCollection<Book>, ConfirmEventArgs>(BookAdded_Notification);
+        //    bookCollection.AddItem(new Book { Title = "Book2", Description = "Book2" });
+        //}
 
         private static void BookAdded_Notification(EntityCollection<Book> sender, ConfirmEventArgs confirmEventArgs)
         {

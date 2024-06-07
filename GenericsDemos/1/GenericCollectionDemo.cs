@@ -6,51 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace GenericsPractice
-{
-    public class IntCollection : ArrayList
-    {
-        public void Add(int? i)
-        {
-            if (i.HasValue)
-            {
-                base.Add(i);
-            }
-            else
-            {
-                throw new ApplicationException("Invalid value");
-            }
-        }
-        public void Remove(int? i)
-        {
-            if (i.HasValue)
-            {
-                base.Remove(i);
-            }
-            else
-            {
-                throw new ApplicationException("Invalid value");
-            }
-        }
-        public int? this[int position]
-        {
-            get
-            {
-                try
-                {
-                    return Convert.ToInt32(base[position]);
-                }
-                catch (Exception ex)
-                {
-                    throw;
-                }
-            }
-            set
-            {
-                if (value != null)
-                    base[position] = value;
-            }
-        }
-    }
+{    
     public class GenericCollectionDemo
     {
         //static void Main()
